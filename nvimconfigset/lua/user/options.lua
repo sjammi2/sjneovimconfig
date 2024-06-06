@@ -1,5 +1,6 @@
 local options = {
   backup = true,                          -- creates a backup file
+  backupdir = "/home/shreyjam/backups/",                     -- where to store backup files
   clipboard = "unnamedplus",               -- allows neovim to access the system clipboard
   cmdheight = 2,                           -- more space in the neovim command line for displaying messages
   completeopt = { "menuone", "noselect" }, -- mostly just for cmp
@@ -27,7 +28,7 @@ local options = {
   tabstop = 2,                             -- insert 2 spaces for a tab
   cursorline = true,                       -- highlight the current line
   cursorcolumn = true,                     -- highlight the current column
-  colorcolumn = "1",                      -- set color column to 80 characters
+  --colorcolumn = "1",                      -- set color column to 80 characters
   number = true,                           -- set numbered lines
   relativenumber = false,                  -- set relative numbered lines
   numberwidth = 2,                         -- set number column width to 2 {default 4}

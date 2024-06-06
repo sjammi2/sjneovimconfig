@@ -18,10 +18,10 @@ vim.g.maplocalleader = "."
 --   term_mode = "t",
 --   command_mode = "c",
 
-keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "(find_files) Fuzzy find files in cwd" }, opts)
-keymap("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "(oldfiles) Fuzzy find recent files" },opts)
-keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "(live_grep) Find string in cwd" }, opts)
-keymap("n", "<leader>fs", "<cmd>Telescope grep_string<cr>", { desc = "(grep_string) Find string under cursor in cwd" }, opts)
+keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", { desc = "(find_files) Fuzzy find files in cwd" }, opts)
+keymap("n", "<leader>ff", "<cmd>Telescope oldfiles<cr>", { desc = "(oldfiles) Fuzzy find recent files" },opts)
+keymap("n", "<leader>g", "<cmd>Telescope live_grep<cr>", { desc = "(live_grep) Find string in cwd" }, opts)
+keymap("n", "<leader>gs", "<cmd>Telescope grep_string<cr>", { desc = "(grep_string) Find string under cursor in cwd" }, opts)
 --keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" }, opts)
 --keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" }, opts)
 --keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" }, opts)
@@ -86,11 +86,13 @@ keymap('n', "<S-t>", ":Tagbar<CR>", opts )
 
 -- Terminal --
 keymap('n', "<C-p>", ":lua _PYTHON_TOGGLE()<CR>")
-keymap('n', "<leader>hh", ":lua _HTOP_TOGGLE()<CR>")
-keymap('n', "<leader>nn", ":lua _NCDU_TOGGLE()<CR>")
-keymap('n', "<leader>//", ":lua _LAZYGIT_TOGGLE()<CR>")
+keymap('n', "<leader>j", ":lua _JULIA_TOGGLE()<CR>")
+
+--keymap('n', "<leader>hh", ":lua _HTOP_TOGGLE()<CR>")
+--keymap('n', "<leader>nn", ":lua _NCDU_TOGGLE()<CR>")
+keymap('n', "<leader>l", ":lua _LAZYGIT_TOGGLE()<CR>")
 -- Better terminal navigation
-keymap('n', "<leader>t", ":ToggleTerm<CR>")
+keymap('n', "<leader>/", ":ToggleTerm<CR>")
 -- Better terminal navigation
 -- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
 -- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)

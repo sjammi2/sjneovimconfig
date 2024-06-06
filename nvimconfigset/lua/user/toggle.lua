@@ -13,7 +13,7 @@ toggleterm.setup({
 	start_in_insert = true,
 	insert_mappings = true,
 	persist_size = true,
-	direction = "float",
+	direction = "vertical",
 	close_on_exit = true,
 	shell = vim.o.shell,
 	float_opts = {
@@ -45,11 +45,18 @@ function _LAZYGIT_TOGGLE()
 	lazygit:toggle()
 end
 
-local node = Terminal:new({ cmd = "node", hidden = true })
+local julia = Terminal:new({ cmd = "julia", hidden = true })
 
-function _NODE_TOGGLE()
-	node:toggle()
+function _JULIA_TOGGLE()
+	julia:toggle()
 end
+
+
+--local node = Terminal:new({ cmd = "node", hidden = true })
+
+--function _NODE_TOGGLE()
+--	node:toggle()
+--end
 
 local ncdu = Terminal:new({ cmd = "ncdu", hidden = true })
 

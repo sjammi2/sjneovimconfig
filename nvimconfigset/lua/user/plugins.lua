@@ -45,7 +45,7 @@ return packer.startup(function(use)
   use { "windwp/nvim-autopairs"} -- Autopairs, integrates with both cmp and treesitter
   use { "numToStr/Comment.nvim" }
 
-  --use { "JoosepAlviste/nvim-ts-context-commentstring", commit = "4d3a68c41aadd8804f471fcc49bb398fe8de08" }
+  use { "JoosepAlviste/nvim-ts-context-commentstring" }
   use { "kyazdani42/nvim-web-devicons" }
   use { "kyazdani42/nvim-tree.lua" }
   --use { "akinsho/bufferline.nvim", commit = "83bf4dc7bff642e145c8b4547aa596803a8b4dc4" }
@@ -81,16 +81,14 @@ return packer.startup(function(use)
 	use { "saadparwaiz1/cmp_luasnip"} -- snippet completions
 	use { "hrsh7th/cmp-nvim-lsp" }
 	use { "hrsh7th/cmp-nvim-lua"}
-  
 
 	-- Snippets
   use { "L3MON4D3/LuaSnip" } --snippet engine
   use { "rafamadriz/friendly-snippets"} -- a bunch of snippets to use
-  
 
   use {"stevearc/dressing.nvim"}
 
-
+  use {'JuliaEditorSupport/julia-vim'}
 	-- LSP
   use {"williamboman/mason-lspconfig.nvim"}
   use {"williamboman/mason.nvim"}
@@ -117,6 +115,11 @@ return packer.startup(function(use)
   requires = { {'nvim-lua/plenary.nvim'} }
   }
 
+  use {
+  'nvimdev/dashboard-nvim',
+  event = 'VimEnter',
+  requires = {'nvim-tree/nvim-web-devicons'}
+  }
   -- Ripgrep
   --use {}
 

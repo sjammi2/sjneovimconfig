@@ -17,3 +17,5 @@ require "user.lsp.lspconfig"
 require'lspconfig'.pyright.setup{}
 require'lspconfig'.fortls.setup{}
 require'lspconfig'.lua_ls.setup{}
+require'lspconfig'.julials.setup{}
+require'lspconfig'.marksman.setup{}

@@ -13,7 +13,8 @@ require "user.telescope"
 require "user.tree"
 require'nvim-tree'.setup {}
 require "user.treesitter"
-
+require "user.toggle"
+require "user.dashboard"
 --require "user.bufferline"
 --require "user.lualine"
 --require "user.toggleterm"
