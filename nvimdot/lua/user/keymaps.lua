@@ -85,12 +85,15 @@ keymap('n', "<S-t>", ":Tagbar<CR>", opts )
 
 
 -- Terminal --
-keymap('n', "<C-p>", ":lua _PYTHON_TOGGLE()<CR>")
+keymap('n', "<leader>p", ":lua _PYTHON_TOGGLE()<CR>")
 keymap('n', "<leader>j", ":lua _JULIA_TOGGLE()<CR>")
+keymap('n', "<leader>w", ":lua _WARP_TOGGLE()<CR>")
+keymap('n', "<leader>b", ":lua _BTOP_TOGGLE()<CR>")
+
 
 --keymap('n', "<leader>hh", ":lua _HTOP_TOGGLE()<CR>")
 --keymap('n', "<leader>nn", ":lua _NCDU_TOGGLE()<CR>")
-keymap('n', "<leader>l", ":lua _LAZYGIT_TOGGLE()<CR>")
+keymap('n', "<leader>,", ":lua _LAZYGIT_TOGGLE()<CR>")
 -- Better terminal navigation
 keymap('n', "<leader>/", ":ToggleTerm<CR>")
 -- Better terminal navigation

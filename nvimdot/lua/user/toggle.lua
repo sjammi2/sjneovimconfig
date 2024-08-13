@@ -13,7 +13,7 @@ toggleterm.setup({
 	start_in_insert = true,
 	insert_mappings = true,
 	persist_size = true,
-	direction = "vertical",
+	direction = "float",
 	close_on_exit = true,
 	shell = vim.o.shell,
 	float_opts = {
@@ -57,6 +57,20 @@ end
 --function _NODE_TOGGLE()
 --	node:toggle()
 --end
+
+local btop = Terminal:new({ cmd = "btop", direction="tab", hidden = true })
+
+function _BTOP_TOGGLE()
+	btop:toggle()
+end
+
+
+local warp = Terminal:new({ cmd = "warp-terminal", direction="tab", hidden = true })
+
+function _WARP_TOGGLE()
+	warp:toggle()
+end
+
 
 local ncdu = Terminal:new({ cmd = "ncdu", hidden = true })
 

@@ -48,6 +48,9 @@ return packer.startup(function(use)
   use { "JoosepAlviste/nvim-ts-context-commentstring" }
   use { "kyazdani42/nvim-web-devicons" }
   use { "kyazdani42/nvim-tree.lua" }
+-- These optional plugins should be loaded directly because of a bug in Packer lazy loading
+  use {'lewis6991/gitsigns.nvim'} -- OPTIONAL: for git status
+  use {'romgrk/barbar.nvim'}
   --use { "akinsho/bufferline.nvim", commit = "83bf4dc7bff642e145c8b4547aa596803a8b4dc4" }
 	--use { "moll/vim-bbye", commit = "25ef93ac5a87526111f43e5110675032dbcacf56" }
   --use { "nvim-lualine/lualine.nvim", commit = "a52f078026b27694d2290e34efa61a6e4a690621" }
@@ -58,8 +61,13 @@ return packer.startup(function(use)
   --use { "goolord/alpha-nvim", commit = "0bb6fc0646bcd1cdb4639737a1cee8d6e08bcc31" }
 	--use {"folke/which-key.nvim"}
   use {"akinsho/toggleterm.nvim"}
---use
 
+  use {
+    'junegunn/fzf.vim',
+    requires = { 'junegunn/fzf', run = ':call fzf#install()' }
+  }
+  --use
+  use {"nvim-neo-tree/neo-tree.nvim"}
   -- autopairs 
   --use {"windwp/nvim-autopairs"}
   -- coc 
@@ -119,8 +127,7 @@ return packer.startup(function(use)
   'nvimdev/dashboard-nvim',
   event = 'VimEnter',
   requires = {'nvim-tree/nvim-web-devicons'}
-  }
-  -- Ripgrep
+}  -- Ripgrep
   --use {}
 
 	-- Treesitter
