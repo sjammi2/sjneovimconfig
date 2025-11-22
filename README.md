@@ -1,1 +1,2 @@
-# sjneovimconfig
+# sjneovimconfigfoobar
+\n foobar
